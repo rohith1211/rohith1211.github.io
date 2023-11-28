@@ -5,7 +5,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Yay, see you in next year Sanju! Date is yet to be known";
+  question.innerHTML = "Yay, see you in next year! Date is yet to be known";
   gif.src =
     "https://pa1.aminoapps.com/8702/71d8f38374cf1c93a77eecc582ff8c009eec2b9er1-500-500_hq.gif";
 });
