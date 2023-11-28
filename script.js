@@ -8,6 +8,8 @@ yesBtn.addEventListener("click", () => {
   question.innerHTML = "Yeyyy, Twaralo malli kaludham! Google lo Poyi Goodness ani Kottundri";
   gif.src =
     "https://pa1.aminoapps.com/8702/71d8f38374cf1c93a77eecc582ff8c009eec2b9er1-500-500_hq.gif";
+  gif.src =
+    "https://pa1.aminoapps.com/8702/71d8f38374cf1c93a77eecc582ff8c009eec2b9er1-500-500_hq.gif";
 });
 
 noBtn.addEventListener("mouseover", () => {
