@@ -7,7 +7,7 @@ const noBtn = document.querySelector(".no-btn");
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Yeyyy, Twaralo malli kaludham! Google lo Poyi Goodness ani Kottundri";
   gif.src =
-    "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fview%2Fanudeep-kv-nag-ashwin-naveen-polishetty-jathi-ratnalu-telugu-gif-21128115&psig=AOvVaw25UsKgkjtvcNHj_4TX0yv8&ust=1701288221572000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLj06ta-54IDFQAAAAAdAAAAABAD";
+    "https://media.tenor.com/jYFGlZg6Ys0AAAAC/anudeep-kv-nag-ashwin.gif";
 });
 
 noBtn.addEventListener("mouseover", () => {
