@@ -68,7 +68,7 @@ body {
     border-radius: 15px;
     text-align: center;
     width: 350px;  /* Increase width to make the card wider */
-    height: 530px; /* Set height to make the card taller */
+    height: 550px; /* Set height to make the card taller */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
@@ -101,12 +101,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
-    width: 350px;
+    width: 350px;  /* Increase width to make the card wider */
+    height: 550px; /* Set height to make the card taller */
     background-color: #ead6d0b3;
     position: relative;
+    overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 /* Music Container Styles */
@@ -203,7 +205,6 @@ body {
 }
 
 
-
 /* Hide Invitation Card After Opening */
 .card-opened .invitation-card {
     display: none;
@@ -222,11 +223,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 400px; /* Set a max height for the gif */
+    max-width: 400px /* Prevents the image from overflowing horizontally */
     width: 300px;
     height: 300px;
     margin-bottom: 15px auto;
     background-repeat:  no-repeat;
     background-size: contain;
+    object-fit: contain;
 }
 
 .img-fluid {
@@ -268,8 +272,12 @@ body {
 }
 
 .text {
+    max-height: 100px;
     font-size: 20px;
     margin: 30px 0;
+    text-overflow: ellipsis; /* Optionally show an ellipsis for overflow */
+    margin-top: 2px; /* Reduce the gap from the gif */
+    margin-bottom: 10; /* Ensure no extra space below the text */
 }
 
 /* Mobile Adjustments */
@@ -291,10 +299,11 @@ body {
 
     /* Valentine's Card */
     .card {
-        font-size: 18px;
+        font-size: 16px;
         padding: 20px;
         width: 90%;  /* Reduced width */
         height: auto;
+        text-align: center;
     }
 
     /* Adjust Background Video */
@@ -326,6 +335,6 @@ body {
     /* Heart Image */
     .heart img {
         width: 80%;
-        height: auto;
+        height: 50%;;
     }
 }

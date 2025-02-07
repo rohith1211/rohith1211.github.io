@@ -1,12 +1,12 @@
 const alternatives = [
-    {text: "", images: "./assets/images/goblin.gif", song: './assets/songs/malare_piano_instr.mp3'},
-    {text: "Think again...Amma Aavakay Anand", images: "./assets/images/roopa.jpg", song: './assets/songs/Anand.mp3'},
+    {text: "Sundari Kannal Oru Sethi", images: "./assets/images/goblin.gif", song: './assets/songs/malare_piano_instr.mp3'},
+    {text: "Sangeetham nuvaithe saahithyam nenavtha la...la..la.... Aalochinchu inkosari...", images: "./assets/images/roopa.jpg", song: './assets/songs/Anand.mp3'},
     {text: "Come on now, say yes!, We can have drinks, ledhante nik ivakunda motham tagestha", images: "./assets/images/strong.gif", song: './assets/songs/Mudhal.mp3'},
-    {text: "I promise, oka chakkati coffee date if will be unforgettable", images: "./assets/images/sad1.gif", song: './assets/songs/mass.mp3'},
-    {text: "Sundari nene nuvanta chudani nelo nananta.", images: "./assets/images/sundari.gif", song: './assets/songs/sundari.mp3'},
+    {text: "I promise, A Date of Pappu Annam sambar and also gulabjamun with icecream", images: "./assets/images/sad1.gif", song: './assets/songs/mass.mp3'},
+    {text: "Acha chalta hoon, Duaon mein yaad rakhna - Channa Mereya", images: "./assets/images/sundari.gif", song: './assets/songs/sundari.mp3'},
 ];
 
-const ohyes = {text: "I knew you would accept!, send the message dinner in Taj Banjara", images: "./assets/images/rrr.gif", song: './assets/songs/Blue.mp3'};
+const ohyes = {text: "Aww.., Pranam kanna viluvaina ne sopathi na sontham, Shall i take you out for comfort food, Msg karo in the box", images: "./assets/images/rrr.gif", song: './assets/songs/Blue.mp3'};
 
 const title = document.querySelector('.title');
 const text = document.querySelector('.text');
