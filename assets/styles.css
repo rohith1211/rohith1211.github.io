@@ -1,0 +1,331 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Cursor */
+.custom-cursor, .button {
+    cursor: url('./images/cursor.png') 16 16, auto;
+}
+
+.dancing-script-custom {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.raleway-custom {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Body Styling */
+body {
+    font-family: "Raleway", sans-serif;
+    color: #AA1B2D;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('./images/cover.gif');
+    background-size: cover;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: fixed;
+    bottom: 15px; /* Keep it a bit off the bottom */
+    right: 0; /* Position it on the right */
+    transform: translateX(0); /* No need to center horizontally, align it to the right */
+    width: 30%;  /* You can adjust this value as needed for the desired width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 205px; /* Limit height */
+    z-index: -1; /* Keep it behind other content */
+    object-fit: cover; /* Ensure it fills the space properly */
+    opacity: 0.8; /* Adjust transparency if needed */
+}
+
+
+/* Invitation Card Styling */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.invitation-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 60px; /* Increase padding to make the card bigger */
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;  /* Increase width to make the card wider */
+    height: 530px; /* Set height to make the card taller */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.7;
+}
+
+.open-card-btn {
+    margin-top: 30px; /* Increase space between the button and content */
+    padding: 20px 40px; /* Increase padding of the button */
+    font-size: 24px; /* Make the button text larger */
+    background-color: #AA1B2D;
+    color: #EAD6D0;
+    border: none;
+    border-radius: 10px; /* Larger rounded corners for the button */
+    cursor: pointer;
+}
+
+.open-card-btn:hover {
+    background-color: #EAD6D0;
+    color: #AA1B2D;
+    font-weight: 700;
+    box-shadow: 3px 3px 5px #AA1B2D;
+}
+
+/* Valentine's Card Styles (hidden initially) */
+.card {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    background-color: #ead6d0b3;
+    position: relative;
+}
+
+/* Music Container Styles */
+.music-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the container horizontally */
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    width: auto;  /* Auto width to make it smaller */
+    padding: 8px 12px;  /* Reduced padding for a tighter container */
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Music Player Styles */
+.music-player {
+    display: flex;
+    flex-direction: row;  /* Align buttons horizontally next to image */
+    align-items: center;  /* Center all items vertically */
+    margin-right: 8px;  /* Further reduced space between music player and song input form */
+}
+
+.music-image {
+    width: 35px;  /* Smaller image */
+    height: 35px;  /* Smaller image */
+    border-radius: 50%;
+    margin-right: 4px;  /* Reduced space between the image and the button */
+}
+
+/* Play/Pause button styles */
+.music-button {
+    background-color: #AA1B2D;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;  /* Slightly smaller icon size */
+    color: #0f0e0e;
+    margin: 0 3px;  /* Reduced margin between the buttons */
+    padding: 6px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 35px;  /* Slightly smaller button */
+    height: 35px; /* Slightly smaller button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect for buttons */
+.music-button:hover {
+    background-color: #4c2ab2;
+    color: #AA1B2D;
+}
+
+/* Song Name Form Styles */
+.song-name-form {
+    display: flex;
+    align-items: center; /* Align input and button horizontally */
+    justify-content: center;
+    margin-left: 8px; /* Reduced space between the form and the buttons */
+}
+
+.song-name-form input {
+    padding: 3px;
+    font-size: 13px;  /* Slightly smaller font */
+    width: 180px;  /* Adjusted width for a more compact input field */
+    margin: 0 6px;  /* Reduced margin */
+}
+
+.song-name-form button {
+    padding: 3px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #AA1B2D;
+    border: 1px solid #a88734;
+    color: white;
+}
+
+.song-name-form button:hover {
+    background-color: #e4a03a;
+}
+
+
+/* When music is playing, hide the play button and show the pause button */
+#playMusicIcon {
+    display: block;
+}
+
+#pauseMusicIcon {
+    display: none;
+}
+
+
+
+/* Hide Invitation Card After Opening */
+.card-opened .invitation-card {
+    display: none;
+}
+
+/* Valentine's Card Title */
+.title {
+    font-size: 34px;
+    color: #AA1B2D;
+    padding: 5px;
+    font-family: "Dancing Script", cursive, sans-serif;
+}
+
+/* Heart Section */
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px auto;
+    background-repeat:  no-repeat;
+    background-size: contain;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 8px;
+    border-radius: 5px;
+    width: 80px;
+    color: #EAD6D0;
+    background-color: #AA1B2D;
+}
+
+.button:hover {
+    color: #AA1B2D;
+    background: #EAD6D0;
+    font-weight: 700;
+    box-shadow: 5px 5px 5px #AA1B2D;
+}
+
+.button.button__error {
+    width: 100%;
+    display: none;
+}
+
+.text {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    /* Music container */
+    .music-container {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Invitation Card */
+    .invitation-card {
+        font-size: 16px;
+        padding: 20px; /* Reduced padding */
+        width: 90%;  /* Increased width to make it take more space */
+        height: auto; /* Remove fixed height */
+        text-align: center;
+    }
+
+    /* Valentine's Card */
+    .card {
+        font-size: 18px;
+        padding: 20px;
+        width: 90%;  /* Reduced width */
+        height: auto;
+    }
+
+    /* Adjust Background Video */
+    .background-video {
+        width: 100%; /* Ensure video takes up full width */
+        height: 10%;
+        object-fit: contain; /* Ensure the video fits without cropping */
+    }
+
+    /* Background Image Adjustment */
+    body {
+        background-size: contain; /* Change to 'contain' instead of 'cover' for better mobile display */
+        background-position: center; /* Keep the background image centered */
+    }
+
+    /* Music Player Form */
+    .song-name-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Buttons Adjustments */
+    .button, .button__negative, .button__error {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Heart Image */
+    .heart img {
+        width: 80%;
+        height: auto;
+    }
+}

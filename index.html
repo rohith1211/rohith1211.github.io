@@ -3,18 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>message for you</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
+
+    <title>Surprise Card</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h2 class="question">Would you like to go see a Telugu movie with me????</h2>
-        <img class="gif" alt="gif" src="https://pa1.aminoapps.com/8702/71d8f38374cf1c93a77eecc582ff8c009eec2b9er1-500-500_hq.gif"/>
-        <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+
+<!-- Music Player outside both cards -->
+<div class="music-container">
+    <div class="music-player">
+        <img src="./assets/images/music_img.png" alt="Music Image" class="music-image">
+        <div class="play-pause-icons">
+            <!-- Play and Pause buttons with Font Awesome icons -->
+            <button id="playMusicIcon" class="music-button">
+                <i class="fas fa-play"></i> <!-- Play icon -->
+            </button>
+            <button id="pauseMusicIcon" class="music-button" style="display: none;">
+                <i class="fas fa-pause"></i> <!-- Pause icon -->
+            </button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- Song Name Input Form -->
+    <div class="song-name-form">
+        <input type="text" id="songName" placeholder="Chepu" required>
+        <button id="submitSongName" class="submit-btn">Send</button>
+    </div>
+</div>
+
+<!-- Background Video -->
+<video class="background-video" autoplay loop muted>
+    <source src="./assets/images/anuvjain.mp4" type="video/mp4">
+</video>
+
+
+<!-- Invitation Card Container -->
+<div class="intro">
+    <div class="invitation-card">
+        <h>Let’s open the card with some music and a little dance steps, shall we?</h>
+        <h>Remember to take it slow, Let’s make the time stop for a moment</h>
+        <h>Click play, Music’s waiting at the top right—Oye Song Ento Chepuko chudham</h>
+        <button class="open-card-btn">Click to open the surprise!</button>
+        <!-- Button to trigger the card reveal -->
+    </div>
+</div>
+
+<!-- Hidden Valentine's Card Content -->
+<div class="card" style="display: none;">
+    <h1 class="title">Will you be my Gaaju Bomma on Feb 14?</h1>
+    <div class="heart">
+        <img src="./assets/images/1.gif" alt="Valentine" class="cat img-fluid">
+    </div>
+    <div class="text"></div>
+
+    <div class="btn-container">
+        <button class="button">YES</button>
+        <button class="button button__negative">NO</button>
+        <button class="button button__error">Error, we need to restart</button>
+    </div>
+</div>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>
