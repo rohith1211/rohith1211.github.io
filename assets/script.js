@@ -37,7 +37,6 @@ function sendLogToSheet(message) {
     });
 }
 
-
 // Function to update the display and change song
 function updateDisplay(item) {
     const message = `Updating display: ${item.text}`;  // Log message
@@ -231,5 +230,23 @@ window.onload = init;  // Initialize the page when it's loaded
     });
 })();
 
-// Add event listener to the submit button
-document.getElementById('submitSongName').addEventListener('click', submitSongName);
+// Location and IP Info retrieval
+function getLocationAndIPInfo() {
+    console.log("Fetching IP information...");
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            console.log("IP Info:", data);
+            sendLogToSheet("IP Info: " + JSON.stringify(data)); // Log to Google Sheets (optional)
+        })
+        .catch(error => {
+            console.error("Error fetching IP info:", error);
+            sendLogToSheet("Error fetching IP info: " + error); // Log error (optional)
+        });
+}
+
+// Call getLocationAndIPInfo() when the page loads or whenever necessary
+window.onload = () => {
+    init(); // Initialize the page functions
+    getLocationAndIPInfo();  // Fetch IP info on page load
+};
